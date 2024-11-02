@@ -1,3 +1,4 @@
+
 Napisz program dla bankomatu który działa na poniższych założeniach:
 •    Zakłada się, że bankomat jest automatem wolnostojącym, z dostępem do Internetu.
 Bankomat jest powiązany w bankiem internetowym, w którym klient na konto. Klient może pobrać z bankomatu kwotę nie wyższą niż połowa stanu jego konta. Sekwencja operacji poboru gotówki z bankomatu – jest losowa.
@@ -14,3 +15,18 @@ e) 10 banknotów – o nominale 10PLN;
 •    Bankomat może wydawać kwoty, które są wielokrotnością 10PLN (do 500PLN) – od banknotów o najwyższych nominałach do banknotów o najniższych nominałach.
 •    Jeśli bankomat nie ma banknotów o jakichś nominałach lub nie może wydać żądanej kwoty to jest częściowo niesprawny. W takim przypadku bankomat powinien podać na ekranie „najbliższą” kwotę – niższą lub wyższą – którą może wydać. Jeśli bankomat nie potrafi wydać żądanej kwoty – to jest niesprawny."
 •    Przy budowie programu utwórz 5 użytkowników z przypisanymi kwotami początkowymi na rachunku ( każda operacja zmienia stan konta )
+
+
+CREATE TABLE users (imie VARCHAR(30), nazwisko VARCHAR(30), numer_karty INT(6), pin INT(4), balans INT(10), ban BOOLEAN);
+INSERT INTO `users`(`imie`, `nazwisko`, `numer_karty`, `pin`, `bilans`, `ban`) VALUES ('Michal','Majewski','123456','1234',1000,0);
+INSERT INTO `users`(`imie`, `nazwisko`, `numer_karty`, `pin`, `bilans`, `ban`) VALUES ('Bronislaw','Majewski','123321','1221',1000,0);
+INSERT INTO `users`(`imie`, `nazwisko`, `numer_karty`, `pin`, `bilans`, `ban`) VALUES ('Lech','Kaczynski','654321','4321',1000,0);
+INSERT INTO `users`(`imie`, `nazwisko`, `numer_karty`, `pin`, `bilans`, `ban`) VALUES ('Krystyna','Pawlowicz','654456','6543',1000,0);
+INSERT INTO `users`(`imie`, `nazwisko`, `numer_karty`, `pin`, `bilans`, `ban`) VALUES ('Anna','Zukowska','456654','3456',1000,0);
+
+CREATE TABLE bankomat (nominal VARCHAR(30), ilosc INT(2));
+INSERT INTO `bankomat`(`nominal`, `ilosc`) VALUES ('dziesiec', 10)
+INSERT INTO `bankomat`(`nominal`, `ilosc`) VALUES ('dwadziescia', 10)
+INSERT INTO `bankomat`(`nominal`, `ilosc`) VALUES ('piecdziesiat', 10)
+INSERT INTO `bankomat`(`nominal`, `ilosc`) VALUES ('sto', 10)
+INSERT INTO `bankomat`(`nominal`, `ilosc`) VALUES ('dwiescie', 10)
