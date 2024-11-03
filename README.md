@@ -17,12 +17,12 @@ e) 10 banknotów – o nominale 10PLN;
 •    Przy budowie programu utwórz 5 użytkowników z przypisanymi kwotami początkowymi na rachunku ( każda operacja zmienia stan konta )
 
 
-CREATE TABLE users (imie VARCHAR(30), nazwisko VARCHAR(30), numer_karty INT(6), pin INT(4), balans INT(10), ban BOOLEAN);
-INSERT INTO `users`(`imie`, `nazwisko`, `numer_karty`, `pin`, `bilans`, `ban`) VALUES ('Michal','Majewski','123456','1234',1000,0);
-INSERT INTO `users`(`imie`, `nazwisko`, `numer_karty`, `pin`, `bilans`, `ban`) VALUES ('Bronislaw','Majewski','123321','1221',1000,0);
-INSERT INTO `users`(`imie`, `nazwisko`, `numer_karty`, `pin`, `bilans`, `ban`) VALUES ('Lech','Kaczynski','654321','4321',1000,0);
-INSERT INTO `users`(`imie`, `nazwisko`, `numer_karty`, `pin`, `bilans`, `ban`) VALUES ('Krystyna','Pawlowicz','654456','6543',1000,0);
-INSERT INTO `users`(`imie`, `nazwisko`, `numer_karty`, `pin`, `bilans`, `ban`) VALUES ('Anna','Zukowska','456654','3456',1000,0);
+CREATE TABLE users (imie VARCHAR(30), nazwisko VARCHAR(30), numer_karty INT(6), pin INT(4), balans INT(10), ban datetime);
+INSERT INTO `users`(`imie`, `nazwisko`, `numer_karty`, `pin`, `bilans`, `ban`) VALUES ('Michal','Majewski','123456','1234',1000);
+INSERT INTO `users`(`imie`, `nazwisko`, `numer_karty`, `pin`, `bilans`, `ban`) VALUES ('Bronislaw','Majewski','123321','1221',1000);
+INSERT INTO `users`(`imie`, `nazwisko`, `numer_karty`, `pin`, `bilans`, `ban`) VALUES ('Lech','Kaczynski','654321','4321',1000);
+INSERT INTO `users`(`imie`, `nazwisko`, `numer_karty`, `pin`, `bilans`, `ban`) VALUES ('Krystyna','Pawlowicz','654456','6543',1000);
+INSERT INTO `users`(`imie`, `nazwisko`, `numer_karty`, `pin`, `bilans`, `ban`) VALUES ('Anna','Zukowska','456654','3456',1000);
 
 CREATE TABLE bankomat (nominal VARCHAR(30), ilosc INT(2));
 INSERT INTO `bankomat`(`nominal`, `ilosc`) VALUES ('dziesiec', 10)
@@ -30,3 +30,6 @@ INSERT INTO `bankomat`(`nominal`, `ilosc`) VALUES ('dwadziescia', 10)
 INSERT INTO `bankomat`(`nominal`, `ilosc`) VALUES ('piecdziesiat', 10)
 INSERT INTO `bankomat`(`nominal`, `ilosc`) VALUES ('sto', 10)
 INSERT INTO `bankomat`(`nominal`, `ilosc`) VALUES ('dwiescie', 10)
+
+UPDATE `users` SET `ban`='2024-11-02 00:00:00' WHERE imie = 'Michal'
+UPDATE `users` SET `ban`='2024-01-01 00:00:00'
