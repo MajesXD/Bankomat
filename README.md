@@ -31,5 +31,11 @@ INSERT INTO `bankomat`(`nominal`, `ilosc`) VALUES ('piecdziesiat', 10)
 INSERT INTO `bankomat`(`nominal`, `ilosc`) VALUES ('sto', 10)
 INSERT INTO `bankomat`(`nominal`, `ilosc`) VALUES ('dwiescie', 10)
 
-UPDATE `users` SET `ban`='2024-11-02 00:00:00' WHERE imie = 'Michal'
-UPDATE `users` SET `ban`='2024-01-01 00:00:00'
+UPDATE `users` SET `ban`='2024-01-01 00:00:00';
+UPDATE `users` SET `bilans`= 1000;
+
+UPDATE `bankomat` SET `ilosc`=10;
+
+UPDATE `bankomat` SET `ilosc`=5 WHERE `nominal`='10';
+
+https://chatgpt.com/c/6725555a-05cc-8013-bb5c-e54e48cb86b5
