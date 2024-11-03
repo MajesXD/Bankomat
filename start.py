@@ -71,7 +71,7 @@ else:
     def cashout ():
         quota_operation = int(quota)
 
-        #SPRAWDZANIE 200------------------------------------------------------------------------------------------------------------------
+        #SPRAWDZANIE 200------------------------------------------------------------------------------------------------------------------200
         sql = "SELECT ilosc FROM bankomat WHERE nominal = '200'"
         cursor.execute(sql)
         amount_200 = cursor.fetchone()[0]
@@ -109,7 +109,7 @@ else:
             print('po odjeciu value 200 ' + str(quota_operation))
             print("next operation 200\n")
 
-        #SPRAWDZANIE 100------------------------------------------------------------------------------------------------------------------
+        #SPRAWDZANIE 100------------------------------------------------------------------------------------------------------------------100
         sql = "SELECT ilosc FROM bankomat WHERE nominal = '100'"
         cursor.execute(sql)
         amount_100 = cursor.fetchone()[0]
@@ -146,7 +146,7 @@ else:
             print('po odjeciu value 100 ' + str(quota_operation))
             print("next operation 100\n")
 
-        #SPRAWDZANIE 50-------------------------------------------------------------------------------------------------------------------
+        #SPRAWDZANIE 50-------------------------------------------------------------------------------------------------------------------50
         sql = "SELECT ilosc FROM bankomat WHERE nominal = '50'"
         cursor.execute(sql)
         amount_50 = cursor.fetchone()[0]
@@ -183,7 +183,7 @@ else:
             print('po odjeciu value 50 ' + str(quota_operation))
             print("next operation 50\n")    
 
-        #SPRAWDZANIE 20-------------------------------------------------------------------------------------------------------------------
+        #SPRAWDZANIE 20-------------------------------------------------------------------------------------------------------------------20
         sql = "SELECT ilosc FROM bankomat WHERE nominal = '20'"
         cursor.execute(sql)
         amount_20 = cursor.fetchone()[0]
@@ -220,7 +220,7 @@ else:
             print('po odjeciu value 20 ' + str(quota_operation))
             print("next operation 20\n")
 
-        #SPRAWDZANIE 10-------------------------------------------------------------------------------------------------------------------
+        #SPRAWDZANIE 10-------------------------------------------------------------------------------------------------------------------10
         sql = "SELECT ilosc FROM bankomat WHERE nominal = '10'"
         cursor.execute(sql)
         amount_10 = cursor.fetchone()[0]
@@ -283,6 +283,9 @@ else:
         new_amount_10 = amount_10 - take_10
         cursor.execute(sql, (new_amount_10,))
         connection.commit()
+
+
+
 
         #Update do bazy users
         new_quota = acc_balance - quota
