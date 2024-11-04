@@ -411,9 +411,9 @@ else:
     sure_value = sure_take_200 * 200 + sure_take_100 * 100 + sure_take_50 * 50 + sure_take_20 * 20 + sure_take_10 * 10
     while True:
         question = input('Czy chcesz wypłacić kwotę ' + str(sure_value)+'zl ?\n Tak/Nie\n')
-        if question == 'Nie':
+        if question == 'Nie' or question == 'nie' or question == 'NIE':
             exit()
-        if question == 'Tak':
+        if question == 'Tak' or question == 'tak' or question == 'TAK':
             #Ponowne wyciągnięcie ilości banknotów w bazie danych
             sql = "SELECT ilosc FROM bankomat WHERE nominal = '200'"
             cursor.execute(sql)
