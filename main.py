@@ -108,7 +108,6 @@ else:
             value_200 = value
             quota_operation = quota_operation - value
             take_200 = quantity
-            print('do zabrania 200 ' + str(take_200))
         
         #Jeśli w bazie jest mniej banknotów
         elif amount_200 < quantity and amount_200 > 0:
@@ -117,19 +116,14 @@ else:
             value_200 = value
             quota_operation = quota_operation - value
             take_200 = quantity
-            
-            print('do zabrania 200 ' + str(take_200))
 
         #Jeśli nie ma banknotów
         else:
-            print('pierwsza kwota 200 ' + str(quota_operation))
             quantity = 0
             value = 0
             value_200 = value
             quota_operation = quota_operation - value
             take_200 = 0
-            print('po odjeciu value 200 ' + str(quota_operation))
-            print("next operation 200\n")
         return value, quota_operation, take_200, value_200
     
     #SPRAWDZANIE 100------------------------------------------------------------------------------------------------------------------100
@@ -149,7 +143,6 @@ else:
             value_100 = value
             quota_operation = quota_operation - value
             take_100 = quantity
-            print('do zabrania 100 ' + str(take_100))
 
         #Jeśli w bazie jest mniej banknotów
         elif amount_100 < quantity and amount_100 > 0:
@@ -158,18 +151,14 @@ else:
             value_100 = value
             quota_operation = quota_operation - value
             take_100 = quantity
-            print('do zabrania 100 ' + str(take_100))
 
         #Jeśli nie ma banknotów
         else:
-            print('pierwsza kwota 100 ' + str(quota_operation))
             quantity = 0
             value = 0
             value_100 = value
             quota_operation = quota_operation - value
             take_100 = 0
-            print('po odjeciu value 100 ' + str(quota_operation))
-            print("next operation 100\n")
         return value, quota_operation, take_100, value_100
     
     #SPRAWDZANIE 50-------------------------------------------------------------------------------------------------------------------50
@@ -189,7 +178,6 @@ else:
             value_50 = value
             quota_operation = quota_operation - value
             take_50 = quantity
-            print('do zabrania 50 ' + str(take_50))
         
         #Jeśli w bazie jest mniej banknotów
         elif amount_50 < quantity and amount_50 > 0:
@@ -198,18 +186,14 @@ else:
             value_50 = value
             quota_operation = quota_operation - value
             take_50 = quantity
-            print('do zabrania 50 ' + str(take_50))
 
         #Jeśli nie ma banknotów
         else:
-            print('pierwsza kwota 50 ' + str(quota_operation))
             quantity = 0
             value = 0
             value_50 = value
             quota_operation = quota_operation - value
-            take_50 = 0
-            print('po odjeciu value 50 ' + str(quota_operation))
-            print("next operation 50\n")    
+            take_50 = 0  
         return value, quota_operation, take_50, value_50
     
     #SPRAWDZANIE 20-------------------------------------------------------------------------------------------------------------------20
@@ -229,7 +213,6 @@ else:
             value_20 = value
             quota_operation = quota_operation - value
             take_20 = quantity
-            print('do zabrania 20 ' + str(take_20))
 
         #Jeśli w bazie jest mniej banknotów
         elif amount_20 < quantity and amount_20 > 0:
@@ -238,18 +221,14 @@ else:
             value_20 = value
             quota_operation = quota_operation - value
             take_20 = quantity
-            print('do zabrania 20 ' + str(take_20))
             
         #Jeśli nie ma banknotów
         else:
-            print('pierwsza kwota 20 ' + str(quota_operation))
             quantity = 0
             value = 0
             value_20 = value
             quota_operation = quota_operation - value
             take_20 = 0
-            print('po odjeciu value 20 ' + str(quota_operation))
-            print("next operation 20\n")
         return value, quota_operation, take_20, value_20
     
     #SPRAWDZANIE 10-------------------------------------------------------------------------------------------------------------------10
@@ -262,13 +241,13 @@ else:
         else:
             quantity = 0
             value = quota_operation
+
         #Jeśli w bazie jest więcej lub tyle samo banknotów
         if amount_10 >= quantity and amount_10 > 0:
             value = quantity * 10
             value_10 = value
             quota_operation = quota_operation - value
             take_10 = quantity
-            print('do zabrania 10 ' + str(take_10))
 
         #Jeśli w bazie jest mniej banknotów
         elif amount_10 < quantity and amount_10 > 0:
@@ -277,19 +256,14 @@ else:
             value_10 = value
             quota_operation = quota_operation - value
             take_10 = quantity
-            print('do zabrania 10' + str(take_10))
             
-        
         #Jeśli nie ma banknotów
         else:
-            print('pierwsza kwota 10 ' + str(quota_operation))
             quantity = 0
             value = 0
             value_10 = value
             quota_operation = quota_operation - value
             take_10 = 0
-            print('po odjeciu value 10 ' + str(quota_operation))
-            print("next operation 10\n")
         return value, quota_operation, take_10, value_10
     
     #Koniec---------------------------------------------------------------------------------------------------------------------------
@@ -306,21 +280,6 @@ else:
     sure_take_20 = take_20
     sure_take_10 = take_10
 
-    print('Taki')
-    print(take_200)
-    print(take_100)
-    print(take_50)
-    print(take_20)
-    print(take_10)
-
-    print('valuesy')
-    print(value_200)
-    print(value_100)
-    print(value_50)
-    print(value_20)
-    print(value_10)
-    print('suma')
-
     suma_value = value_200 + value_100 + value_50 + value_20 + value_10
 #//////////////////////////////////////////////////////////////////////////////////
     # Jeśli kwota mniejsza od sumy w bazie
@@ -334,12 +293,7 @@ else:
         amount_50 = amount_50 - take_50
         amount_20 = amount_20 - take_20
         amount_10 = amount_10 - take_10
-        print('nowe amounty')
-        print(amount_200)
-        print(amount_100)
-        print(amount_50)
-        print(amount_20)
-        print(amount_10)
+
         #dla 200
         value, quota_operation, take_200, value_200 = spr_200(quota_operation, amount_200)
         if amount_200 == 0:
@@ -400,13 +354,6 @@ else:
 
         elif least == diff_check[5]:
             sure_take_10 = sure_take_10 + 1
-
-    print('sure')
-    print(sure_take_200)
-    print(sure_take_100)
-    print(sure_take_50)
-    print(sure_take_20)
-    print(sure_take_10)
 
     sure_value = sure_take_200 * 200 + sure_take_100 * 100 + sure_take_50 * 50 + sure_take_20 * 20 + sure_take_10 * 10
     while True:
