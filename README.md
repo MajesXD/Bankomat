@@ -31,6 +31,8 @@ INSERT INTO `bankomat`(`nominal`, `ilosc`) VALUES ('piecdziesiat', 10)
 INSERT INTO `bankomat`(`nominal`, `ilosc`) VALUES ('sto', 10)
 INSERT INTO `bankomat`(`nominal`, `ilosc`) VALUES ('dwiescie', 10)
 
+
+Kwerendy pomocnicze:
 UPDATE `users` SET `ban`='2024-01-01 00:00:00';
 UPDATE `users` SET `bilans`= 1000;
 
