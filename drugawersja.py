@@ -108,6 +108,7 @@ else:
             print('po odjeciu value 200 ' + str(quota_operation))
             print("next operation 200\n")
         return value, quota_operation, take_200, amount_200
+    
     #SPRAWDZANIE 100------------------------------------------------------------------------------------------------------------------100
     def spr_100(quota_operation):
         sql = "SELECT ilosc FROM bankomat WHERE nominal = '100'"
@@ -136,6 +137,7 @@ else:
             quota_operation = quota_operation - value
             take_100 = quantity
             print('do zabrania 100 ' + str(take_100))
+
         #Jeśli nie ma banknotów
         else:
             print('pierwsza kwota 100 ' + str(quota_operation))
@@ -146,6 +148,7 @@ else:
             print('po odjeciu value 100 ' + str(quota_operation))
             print("next operation 100\n")
         return value, quota_operation, take_100, amount_100
+    
     #SPRAWDZANIE 50-------------------------------------------------------------------------------------------------------------------50
     def spr_50(quota_operation):
         sql = "SELECT ilosc FROM bankomat WHERE nominal = '50'"
@@ -184,6 +187,7 @@ else:
             print('po odjeciu value 50 ' + str(quota_operation))
             print("next operation 50\n")    
         return value, quota_operation, take_50, amount_50
+    
     #SPRAWDZANIE 20-------------------------------------------------------------------------------------------------------------------20
     def spr_20(quota_operation):
         sql = "SELECT ilosc FROM bankomat WHERE nominal = '20'"
@@ -222,6 +226,7 @@ else:
             print('po odjeciu value 20 ' + str(quota_operation))
             print("next operation 20\n")
         return value, quota_operation, take_20, amount_20
+    
     #SPRAWDZANIE 10-------------------------------------------------------------------------------------------------------------------10
     def spr_10(quota_operation):
         sql = "SELECT ilosc FROM bankomat WHERE nominal = '10'"
@@ -260,6 +265,7 @@ else:
             print('po odjeciu value 10 ' + str(quota_operation))
             print("next operation 10\n")
         return value, quota_operation, take_10, amount_10
+    
     #Koniec---------------------------------------------------------------------------------------------------------------------------
 
     value, quota_operation, take_200, amount_200 = spr_200(quota_operation)
