@@ -39,5 +39,3 @@ UPDATE `users` SET `bilans`= 1000;
 UPDATE `bankomat` SET `ilosc`=10;
 
 UPDATE `bankomat` SET `ilosc`=5 WHERE `nominal`='10';
-
-https://chatgpt.com/c/6725555a-05cc-8013-bb5c-e54e48cb86b5
